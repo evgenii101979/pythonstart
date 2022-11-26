@@ -1,33 +1,33 @@
-#print('hello')
-#value=None
-##b=1.23
-#print(type(a))
-#print(type(b))
-#value=2566
-#print(type(value))
-#s='hello world'
-#print(a,'-', b,'-',s)
-#print('{2} - {1} - {0}'.format(a,b,s)) # можно менять местами
-#print(f'{a} - {b} - {s}')
-#f=True
-#print(f)
+# print('hello')
+# value=None
+# b=1.23
+# print(type(a))
+# print(type(b))
+# value=2566
+# print(type(value))
+# s='hello world'
+# print(a,'-', b,'-',s)
+# print('{2} - {1} - {0}'.format(a,b,s)) # можно менять местами
+# print(f'{a} - {b} - {s}')
+# f=True
+# print(f)
 
-#list=['ddf', 'fef', 446, '+', 'dd', 1.555, True]
-#print(list)
+# list=['ddf', 'fef', 446, '+', 'dd', 1.555, True]
+# print(list)
 
-#print('Введите а');
-#a=float(input())
-#print('Введите b');
-#b=float(input())
-#print(a,'+', b,'=', a+b)
-#print('{1} - {0}'.format(a,b)) # можно менять местами
-#print(f'{a} - {b}')
+# print('Введите а');
+# a=float(input())
+# print('Введите b');
+# b=float(input())
+# print(a,'+', b,'=', a+b)
+# print('{1} - {0}'.format(a,b)) # можно менять местами
+# print(f'{a} - {b}')
 
 # Арифметические операции
 
-#a=3
-#a+=5
-#print(a)
+# a=3
+# a+=5
+# print(a)
 
 # Логические операции
 
@@ -136,9 +136,9 @@ def f(x):
     else:
         return
 
-arg =8
-print(f(arg))
-print(type(f(arg)))
+# arg =8
+# print(f(arg))
+# print(type(f(arg)))
 
 
 

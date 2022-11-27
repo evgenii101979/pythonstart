@@ -74,18 +74,18 @@
 # t=tuple(colors)
 # print(t)                        # ('red','green','blue')
 
-# a=(3,4)
-# print(a)
-# print(a[0])
+a=(3,4)
+print(a)
+print(a[0])
 
 #  9       СЛОВАРИ(НЕУПОРЯДОЧЕННЫЕ КОЛЛЕКЦИИ ПРОИЗВОЛЬНЫХ
         # ОБЪЕКТОВ С ДОСТУПОМ ПО КЛЮЧУ)
 
-dictionary={}
-dictionary=\
-    {
-        'up': ''
-    }
+# dictionary={}
+# dictionary=\
+#     {
+#         'up': ''
+#     }
 
 
 

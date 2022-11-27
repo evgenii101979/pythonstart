@@ -85,7 +85,7 @@
 # for c in text:
 #     print(c)                            # выводит текст побуквенно
 
-# text = 'съешь ещё этих мягких французских булок' # с конца массива элементы считаются с -1
+# text = 'съешь ещё этих мягких французских булок' # с конца массива с -1
 # print(text[0])                     # c
 # print(text[1])                     # ъ
 # #print(text[len(text)])             # IndexError
@@ -129,9 +129,9 @@
 # Функции
 
 def f(x):
-    if x ==1:
+    if x == 1:
         return 'целое'
-    elif x ==2.3:
+    elif x == 2.3:
         return 23
     else:
         return
@@ -139,6 +139,3 @@ def f(x):
 # arg =8
 # print(f(arg))
 # print(type(f(arg)))
-
-
-

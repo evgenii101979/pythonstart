@@ -30,12 +30,28 @@
 # список: ["123", "234", 123, "567"], ищем: "123", ответ: -1
 # список: [], ищем: "123", ответ: -1
 
-mass = ["123", "234", "123", "567"]
-a = "123"
+# mass = ["123", "234", "123", "567"]
+# a = "123"
 
-try:
-    mass.remove(a)
-    print((mass.index(a))+1)
-except ValueError:
-    print(-1)
+# try:
+#     mass.remove(a)
+#     print((mass.index(a))+1)
+# except ValueError:
+#     print(-1)
 
+import math
+# def milt(n: int) -> str:
+#     """пготтыпт"""
+#     str_mult = '1'
+#     for i in range(2, n+1):
+#         if i == n:
+#             str_mult +=f'*{i}'
+#         else:
+#             str_mult +=f'*{i}'
+#     return str_mult
+n = int(input('Введите число: '))
+multiplications = [math.factorial(i) for i in range(1, n+1)]
+# multiplications_string = [mult(i) for i in range(1, n+1)]
+
+print(f'List multiplications: {multiplications}')
+# print(f'List multiplications: {multiplications_string}')

@@ -7,11 +7,11 @@
 # - [2, 3, 4, 5, 6] => [12, 15, 16];
 # - [2, 3, 5, 6] => [12, 15]
 
-lst = [4, 2, -2, 3, -5, 8]
+lst = [4, 2, -2, 3, -5]
 def pair_num(lst: list[int]) -> list[int]:
     res = []
-    search = int(round((len(lst))+1)/2)
+    search = (len(lst)+1) // 2
     for i in range(search):
-        res.append(lst[i]*lst[-1-i])
+        res.append(lst[i]*lst[-1 - i])
     return res
 print(pair_num(lst))

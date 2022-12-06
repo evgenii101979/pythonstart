@@ -71,7 +71,7 @@
 # 1 2 3 5 8 15 23 38
 # [(2, 4), (8, 64), (38, 1444)]
 
-# path = 'D:\учеба 2\python\HelloPython\lesson3\file_lam.txt'
+# path = 'lesson3/file_lam.txt'
 # f = open(path, 'r')
 # data = f.read() + ' '
 # f.close()
@@ -124,7 +124,16 @@
 
 # users = ['user1', 'user2', 'user3', 'user4', 'user5']
 # ids = [4, 5, 9, 14, 7]
+# salary = [11, 222, 333]
+# data = list(zip(users, ids, salary))
+# print(data)                     # [('user1', 4, 11), ('user2', 5, 222), ('user3', 9, 333)]
 
-# data = zip(users, ids)
-# print(data)
+"""функция enumerate"""
+
+# users = ['user1', 'user2', 'user3', 'user4', 'user5']
+# ids = [4, 5, 9, 14, 7]
+# salary = [11, 222, 333]
+# data = list(enumerate(users))
+# print(data)                     # [(0, 'user1'), (1, 'user2'), (2, 'user3'), (3, 'user4'), (4, 'user5')]
+
 

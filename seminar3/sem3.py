@@ -40,7 +40,7 @@
 #     print(-1)
 
 import math
-# def milt(n: int) -> str:
+# def mult(n: int) -> str:
 #     """пготтыпт"""
 #     str_mult = '1'
 #     for i in range(2, n+1):

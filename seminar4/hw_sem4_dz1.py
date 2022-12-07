@@ -6,4 +6,4 @@
 
 import math
 num = input('Введите точность в формате 0.001: ')
-print(f"pi = {round(math.pi, (int(len(str(num))-2)))}")
+print(f"pi = {round(math.pi, len(num)-2)}")

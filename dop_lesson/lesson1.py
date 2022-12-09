@@ -74,13 +74,71 @@
 # r = int(5.9)
 # print(r, type(r))           # 5 <class 'int'>
 
-x = float(input('Введите число: '))
-y = float(input('Введите число: '))
-r = x + y
-print(r)                                # Введите число: 5 Введите число: 6 11.0
-print('результат: ' + str(r))           # Введите число: 6 Введите число: 8 результат: 14.0
+# x = float(input('Введите число: '))
+# y = float(input('Введите число: '))
+# r = x + y
+# print(r)                                # Введите число: 5 Введите число: 6 11.0
+# print('результат: ' + str(r))           # Введите число: 6 Введите число: 8 результат: 14.0
 
-30:00 Python Hub Studio
+"""Условные операторы if, elif, else"""
 
+# if True:                      # if
+# if False:                       # elif
+#     print('if')
+# elif False:                     # else
+#     print('elif')
+# else:
+#     print('else')
 
+# a = 4 == 4
+# print(a)                         # True
+# a = 4 == 5
+# print(a)                         # False
+# a = 4 <= 3
+# print(a)                         # False
 
+# x = -5
+# if x == 0:                      # if
+# # if x > 0                        # elif
+#     print('if')
+# #elif False:                     # else
+# elif x > 0:                   #  x = 3 # elif
+#     print('elif')
+# else:                         #  x = -5 'else'
+#     print('else')
+
+# x = 0                  # x=5  сразу будет ответ
+# if x == 0:              # x = 0 делает условие и потом ответ 5,0
+#     x += 1
+# print(5/x)
+
+# x = -5.22                                        # x = 0 x был равен 0 100.0
+# if  x == 0:    # not                             # x = 5 x допустимое значение 20.0
+#     x = 1                                        # x = [1, 2, 3] В x недопустимый тип данных 100.0
+#     print('x был равен 0')                       # x = -5.22 x допустимое значение -19.157088122605366
+# elif type(x) == type(5) or type(x) == type(5.5):        # and
+#     print('x допустимое значение')
+# else:
+#     print('В x недопустимый тип данных')
+#     x = 1
+# print(100/x)
+
+# import os
+# sayt = input()                          # youtube.com else
+# if 'https://' in sayt:                  # www.youtube.com elif
+#     os.system('start ' + sayt)          # https://www.youtube.com/ if
+#     print('if')
+# elif 'www.' in sayt:
+#     sayt = 'https://' + sayt
+#     os.system('start ' + sayt)
+#     print('elif')
+# else:
+#     sayt = 'https://www.' + sayt
+#     os.system('start ' + sayt)
+#     print('else')
+
+# import os
+# import time
+# os.system('start ' + 'https://www.youtube.com')         # откроет ютуб
+# time.sleep(5)                                           # через 5 сек
+# os.startfile('D:\игры\край мира\KrayMira\master.exe')   # откроет игру

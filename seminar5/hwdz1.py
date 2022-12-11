@@ -47,7 +47,7 @@ def step_pl(candy):
 def step_bot(candy):
     n = candy % 29
     if n == 0:
-        n = random.randint(1, 29)
+        n = random.randint(1, 28)
     return n
 
 candy = 117

@@ -72,9 +72,9 @@
 # print(d2)                           # {1: 2, 3: 4, 5: 6}
 
 
-d1 = {'a': 7, 'b': 9}       # словарь изменяемый тип данных
-d2 = dict([[1, 2], [3, 4], [5, 6]])              
-d3 = dict.fromkeys([1, 2, 3, 4, 5], 'value')
+# d1 = {'a': 7, 'b': 9}       # словарь изменяемый тип данных
+# d2 = dict([[1, 2], [3, 4], [5, 6]])              
+# d3 = dict.fromkeys([1, 2, 3, 4, 5], 'value')
 
 # d5 = d1.copy()                      # делает копию
 # print(d1.items())                   # возвращает список из кортежей dict_items([('a', 7), ('b', 9)]) для работы со словарем при помощи цикла ФОР
@@ -83,13 +83,71 @@ d3 = dict.fromkeys([1, 2, 3, 4, 5], 'value')
 # d1.update(d2)
 # print(d1)                           # {'a': 7, 'b': 9, 1: 2, 3: 4, 5: 6}
 
-if 'c' in d1:
-    d1['c']
-y = d1.get('c', 'value')        # проверяет есть ли такое значениеБ если нет то выдаст value
-print(y)
+# if 'c' in d1:
+#     d1['c']
+# y = d1.get('c', 'value')        # проверяет есть ли такое значениеБ если нет то выдаст value
+# print(y)
 
-t = d1.pop('a')
-print(t, d1)                    # 7 {'b': 9}
+# t = d1.pop('a')
+# print(t, d1)                    # 7 {'b': 9}
+
+"""Словари, методы dict"""
+"""переборка словарей методом ФОР"""
+
+""""""
+# price = {'meat': 3, 'bread': 1, 'potato': 0.5, 'water': 0.2}
+
+# for i in price:
+#     print(i)        # meat bread potato water выводит ключи словаря
+
+# new_price = {}
+# for i in price:
+#     new_price[i] = round(price[i] * 0.85, 2)
+# print(price)        # {'meat': 3, 'bread': 1, 'potato': 0.5, 'water': 0.2} старый не изменен
+# print(new_price)        # {'meat': 2.55, 'bread': 0.85, 'potato': 0.42, 'water': 0.17} новый со скидкой
+
+""""""
+# price = {'meat': 3, 'bread': 1, 'potato': 0.5, 'water': 0.2}
+
+# new_price = {}
+# x = price.items()
+# for i in price:
+#     new_price[i] = round(price[i] * 0.85, 2)
+# print(x)            # dict_items([('meat', 3), ('bread', 1), ('potato', 0.5), ('water', 0.2)]) теперь в списке кортежи
+# print(type(x))      # <class 'dict_items'>
+# print(list(x))      # [('meat', 3), ('bread', 1), ('potato', 0.5), ('water', 0.2)] преобр. в список
+
+""""""
+# price = {'meat': 3, 'bread': 1, 'potato': 0.5, 'water': 0.2}
+# for key, value in price.items():
+#     #print(i)    # ('meat', 3) ('bread', 1) ('potato', 0.5) ('water', 0.2) выдает картежи
+#     print(key)   # meat bread potato water  распаковали кортежи на ключи
+#     print(value)    # 3 1 0.5 0.2 и значения
+
+"""меняем местами ключи и значения"""
+""""""
+# price = {'meat': 3, 'bread': 1, 'potato': 0.5, 'water': 0.2}
+# new = {}
+# for key, value in price.items():
+#     new[value] = key
+# print(new)          # {3: 'meat', 1: 'bread', 0.5: 'potato', 0.2: 'water'}
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+# price = {'meat': 2, 'bread': 1, 'potato': 0.5, 'water': 0.2}
+# new = {}
+# x = price.values()
+# for key, value in price.items():
+#     new[value] = key
+# # print(new)
+# # print(x)        # dict_values([2, 1, 0.5, 0.2]) словарь в виде список из значений
+# print(list(x))    # [2, 1, 0.5, 0.2] конверт. словарь в список
+
+""""""
+price = {'meat': 2, 'bread': 1, 'potato': 0.5, 'water': 0.2}
+
+for value in price.values():
+    print(value)    # 2 1 0.5 0.2 
+print(price.keys())     # dict_keys(['meat', 'bread', 'potato', 'water'])
 
 
-3.37.23
+
+

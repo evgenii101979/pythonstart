@@ -59,9 +59,14 @@
 # del_st = lambda x, y: " ".join([i for i in x.split() if y not in i])
 # print(del_st('абвгд гдежз жзе абв  ыопыпт', 'абв'))
 
-""""для игры крестики нолики"""
+def abc_delete(massage):
+    find_txt = 'абв'
+    lst = [i for i in massage.split() if find_txt not in i]
+    return lst
+    
+# """"для игры крестики нолики"""
 
-def show_field():
-    global field
-    for i in range(0, len(field), 3):
-        print(field[i], field[i+1], field[i+2])
+# def show_field():
+#     global field
+#     for i in range(0, len(field), 3):
+#         print(field[i], field[i+1], field[i+2])

@@ -1,5 +1,4 @@
-
-(3+4)*10; 70
+(3+4)*10;70
 x**3-8; 2 || -1 - sqrt(3)*I || -1 + sqrt(3)*I
 x**3-8=0; Incorrect input
 x**2-1=0; Incorrect input

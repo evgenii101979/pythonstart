@@ -1,20 +1,28 @@
 # модуль для ввода\вывода информации
 
 def choose() -> str:
-"""выбор режима работы приложения
+    """выбор режима работы приложения
 на вход ничего, на выход приложение"""
-    pass
+    print('1 - solve expression\n\
+2 - solve equasion\n\
+3 - simplify polinom\n\
+4 - show history')
+    return input('Choose mode: ')
 
 def get_expr() -> str:
-    pass
+    """запрашивает у пользователя задачу"""
+    return input('enter expression: ')
 
 def show_res(res: str):
     """выводит результат"""
-    pass
+    print(res)
 
 def error_mode():
     """ничего не принимает возвращает сообщение об ошибке выбора"""
-    pass
+    print('Такого режима нет')
 
 def show_history(history: str):
-    pass
+    """выводит историю операций"""
+    print(history.split('\n'))
+    for i in history.split('\n'):
+        print(i.replace(';', '-> результат: '))

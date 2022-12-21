@@ -1,4 +1,4 @@
 
 import controller
 
-controller run_calc()
+controller.run_calc()

@@ -1,5 +1,5 @@
 import telebot
-from cfg import TOKEN 
+from cfg import TOKEN # создать файл с токеном для запуска
 import model_del_abc
 
 bot = telebot.TeleBot(TOKEN)
@@ -16,7 +16,6 @@ print('сервер в работе')
 bot.infinity_polling()
 
 
-сем 9 1.24.30
 
 
 

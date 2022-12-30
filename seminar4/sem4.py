@@ -32,11 +32,11 @@
 # x = sympy.Symbol('x')
 # ans = sympy.solve(((a*x)**2) + (b*x) + c, x)
 # print(ans)
-import sympy
-x=sympy.Symbol('x')
-b = 4*x**2 + 3*x**2 + x +10
-c = 8*x**9 + 3*x**2 + 9
-print(sympy.simplify(c+b))
+# import sympy
+# x=sympy.Symbol('x')
+# b = 4*x**2 + 3*x**2 + x +10
+# c = 8*x**9 + 3*x**2 + 9
+# print(sympy.simplify(c+b))
 
 
 
@@ -46,14 +46,13 @@ print(sympy.simplify(c+b))
 # *' 6 3 -> 6
 # *' 6 8 -> 24
 
-# a = 1
-# b = 8
+a = 6
+b = 3
 # c = 4
 # for i in range(1, (a * b + 1), 1):
 #     if (i % a == 0) and (i % b == 0):
 #         c = i
 # print('НОК = ', c)
-
 
 
 

@@ -7,6 +7,17 @@
 xpred = [True, False]
 ypred = [True, False]
 zpred = [True, False]
+
+def pred():
+    for i in range(2):
+        xpred[i]
+    for x in xpred:
+        for y in ypred:
+            for z in zpred:
+                print(x, y, z)
+
+
+
 for i in range(2):
     xpred[i]
 for x in xpred:

@@ -1,8 +1,7 @@
 import telebot
-from cfg import TOKEN # создать файл с токеном для запуска
 import model_del_abc
 
-bot = telebot.TeleBot(TOKEN)
+bot = telebot.TeleBot()
 
 @bot.message_handler(commands=['start', 'help'])
 def send_welcome(message):

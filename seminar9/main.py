@@ -1,7 +1,7 @@
 import telebot
 
 
-bot = telebot.TeleBot("YOUR TOKEN")
+bot = telebot.TeleBot()
 
 candys = 117
 

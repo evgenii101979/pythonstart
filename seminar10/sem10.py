@@ -1,2 +1,12 @@
-# Получить информацию о текущих курсах валют при помощи requests и bs4.
-# API для получения курса через requests www.cbr-xml-daily.ru
+# Создать бота для вывода текущего курса валют(желательно запрос по конкретной валюте)
+# currency USD
+
+import telebot
+
+bot = telebot.TeleBot('TOKEN')
+
+
+
+
+print('сервер в работе')
+bot.infinity_polling()

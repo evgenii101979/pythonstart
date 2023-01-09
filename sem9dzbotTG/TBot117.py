@@ -1,120 +1,73 @@
 import telebot
-# from main117 import start
-# from main117 import step_pl
-# from main117 import step_bot
-# from main117 import process
 import random
+from random import choice
 
-
-bot = telebot.TeleBot()
+bot = telebot.TeleBot('TOKEN')
 
 print('сервер в работе')
+
+candy = dict()
+st_game = dict()
+turn = dict()
+
+
+def game_proc(message):
+    global st_game
+    try:
+        if st_game[message] and 1 <= int(message.text) <= 28:
+            return True
+        else:
+            return False
+    except KeyError:
+        st_game[message] = False
+        if st_game[message] and 1 <= int(message.text) <= 28:
+            return True
+        else:
+            return False
 
 @bot.message_handler(commands=['game'])
 def new_game(message):
 	bot.reply_to(message, '\n-------- Игра "117 конфет" -----------\
-							нажмите /start, для выбора очередностьи и начала игры\n')
+							нажмите /start, для выбора очередности и начала игры\n')
 
 @bot.message_handler(commands=['start'])
+def start(message):
+    global candy, first
+    candy[message] = 117
+    first = random.randint(0, 1)
+    if first == 0:
+        bot.reply_to(message, f'первым начинает игрок!\nна столе {candy[message]} конфет, сколько вы возьмете?')
+    else:
+        step_bot = random.randint(1, candy[message] % 29)
+        candy[message] -= step_bot
+        bot.reply_to(message, f'первым начинает бот!\n бот взял {step_bot} конфет. осталось {candy[message]} конфет')
 
-# def proc (message):
-#     while True:
-#         if up % 2 == 0:
-#             bot.reply_to(message, 'Ход игрока! Всего конфет: {candy}')
-#             n = step_pl(candy)
-#             bot.reply_to(message, f'Вы взяли: {n} конфет')
-#         elif up % 2 == 1:
-#             print(f'Ход бота! Всего конфет: {candy}')
-#             n = step_bot(candy)
-#             print(f'Бот взял: {n} конфет')
-#         candy -= n
-#         if candy == 0:
-#             if up % 2 == 0:
-#                 bot.reply_to(message, 'Победил игрок!')
-#             else:
-#                 bot.reply_to(message,'Победил бот!')
-#             break
-#         up += 1
-#         count += 1
-#     return winner
-
-def step_pl(candy):
-    n = 29
-    while n > 28 or n < 1:
-        n = input('сколько конфет вы берете? ')
-        if n.isdigit():
-            n = int(n)
-            if n > 28 or n < 1:
-                print('столько брать нельзя! Возьмите от 1 до 28')
-            if n > candy:
-                print('столько конфет нет!')
-                n = 29
+@bot.message_handler(func=game_proc)
+def proc(message):
+    global first, candy, st_game
+    if first == 0:
+        if candy[message] > 28:
+            candy[message] -= int(message.text)
+            bot.send_message
+            (message, f'вы взяли {message.text} осталось {candy[message]} конфет')
+            if candy[message] > 28:
+                step_bot = random.randint(1, candy[message] % 29)
+                candy[message] -= step_bot
+                bot.send_message(message, f'Бот взял {step_bot} конфет')
+                bot.send_message(message, f'Осталось {candy[message]} конфет')
+                if candy[message] <= 28:
+                    bot.send_message(message, 'User Win')
+                    st_game[message] = False
+            else:
+                bot.send_message(message, 'Bot Win')
+                st_game[message] = False
         else:
-            print('Вы ввели недопустимые символы. Введите число от 1 до 28')
-            n = 29
-    return n
-# def step_pl(message):
-# 	while can > 28 or can < 1:
-# 		can = int(message.text)
-# 		bot.reply_to(message, f'\nвы взяли {can} конфет')
-# 		bot.reply_to(message, f'\nна столе осталось {candy -can} конфет, ход бота')
-# 		if can > 28 or can < 1:
-# 			bot.reply_to(message,'столько брать нельзя! Возьмите от 1 до 28')
-# 		if can > candy:
-# 			bot.reply_to(message,'столько конфет нет!')
-# 			can = 29
-# 	else:
-# 		bot.reply_to(message,'Вы ввели недопустимые символы. Введите число от 1 до 28')
-# 		can = 29
-
-def turn(message):
-	candy = 117
-	count = 1
-	select = random.randint(0, 1)
-	if select == 0:
-		bot.reply_to(message, '\nПервым будет ходить игрок!')
-		if candy > 28:
-            can -= int(message.text)
-			bot.reply_to(message, f'вы взяли {can} конфет')
-            bot.reply_to(message, f'Осталось {candy}')
-		else:
-			
-	else:
-		bot.reply_to(message, '\nПервым будет ходить бот!')
-		can = random.randint(1, candy % 29)
-		bot.reply_to(message, f'\n---------------- Ход номер: {count} ----------------')
-		
-		bot.reply_to(message, f'\nбот взял {can} конфет')
-		bot.reply_to(message, f'\nна столе осталось {candy -can} конфет, ваш ход')
-	count += 1
-
-def st_game(message):
-    bot.reply_to(func=turn)
+            bot.send_message(message, 'Bot Win')
+            st_game[message] = False
 
 
 
 
-# @bot.proc(func=turn)
-# def step_pl(candy):
-#     n = 29
-#     while n > 28 or n < 1:
-#         n = input('сколько конфет вы берете? ')
-#         if n.isdigit():
-#             n = int(n)
-#             if n > 28 or n < 1:
-#                 print('столько брать нельзя! Возьмите от 1 до 28')
-#             if n > candy:
-#                 print('столько конфет нет!')
-#                 n = 29
-#         else:
-#             print('Вы ввели недопустимые символы. Введите число от 1 до 28')
-#             n = 29
-#     return n
 
-def step_bot(candy):
-    n = candy % 29
-    if n == 0:
-        n = random.randint(1, 28)
-    return n
 
 bot.infinity_polling()

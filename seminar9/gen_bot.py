@@ -1,7 +1,7 @@
 import telebot
 import model_del_abc
 
-bot = telebot.TeleBot()
+bot = telebot.TeleBot('TOKEN')
 
 @bot.message_handler(commands=['start', 'help'])
 def send_welcome(message):

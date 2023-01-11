@@ -32,10 +32,10 @@ def new_game(message):
 
 @bot.message_handler(commands=['start'])
 def start(message):
-    global candy, first
+    global candy, turn
     candy[message] = 117
-    first = random.randint(0, 1)
-    if first == 0:
+    turn = random.randint(0, 1)
+    if turn == 0:
         bot.reply_to(message, f'первым начинает игрок!\nна столе {candy[message]} конфет, сколько вы возьмете?')
     else:
         step_bot = random.randint(1, candy[message] % 29)
@@ -44,8 +44,8 @@ def start(message):
 
 @bot.message_handler(func=game_proc)
 def proc(message):
-    global first, candy, st_game
-    if first == 0:
+    global turn, candy, st_game
+    if turn == 0:
         if candy[message] > 28:
             candy[message] -= int(message.text)
             bot.send_message
@@ -64,10 +64,5 @@ def proc(message):
         else:
             bot.send_message(message, 'Bot Win')
             st_game[message] = False
-
-
-
-
-
 
 bot.infinity_polling()

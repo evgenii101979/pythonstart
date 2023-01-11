@@ -5,7 +5,7 @@ import requests
 import telebot
 from telebot import types
 
-bot = telebot.TeleBot('5801925811:AAHcFjH5GqaOLZnxl8aSBxn1JnJWjb13PCM')
+bot = telebot.TeleBot()
 print('сервер в работе')
 
 @bot.message_handler(commands=['currency'])
